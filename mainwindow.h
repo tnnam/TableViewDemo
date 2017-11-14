@@ -15,6 +15,7 @@
 #include <QStandardItem>
 #include <QStandardItemModel>
 #include "person.h"
+#include "dataservices.h"
 
 namespace Ui {
 class MainWindow;
@@ -34,6 +35,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QStandardItemModel *model;
+    DataServices data;
     QList<person> listP;
     QString xmlFileName = "/Users/nam/TableViewDemo/DemoXml3.xml";
     void setModelForTableView();

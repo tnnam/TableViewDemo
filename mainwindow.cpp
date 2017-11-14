@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "dataservices.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -7,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     model = new QStandardItemModel();
-    listP = DocFile(xmlFileName);
+    listP = data.DocFile(xmlFileName);
     setModelForTableView();
 }
 
@@ -43,6 +44,6 @@ void MainWindow::on_addButton_clicked()
     a.name = ui->nameLineEdit->text();
     a.age = ui->ageLineEdit->text().toInt();
     listP.append(a);
-    GhiFile(listP, xmlFileName);
+    data.GhiFile(listP, xmlFileName);
     setModelForTableView();
 }

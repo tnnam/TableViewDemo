@@ -5,6 +5,7 @@
 #include <QList>
 #include <QObject>
 #include <QString>
+#include <QDebug>
 #include <QtXml>
 #include <QFile>
 #include <QMessageBox>
@@ -16,8 +17,11 @@ class DataServices
 {
 public:
     DataServices();
-    QList<person> DocFile(QString);
+    QList<person> parsePerson(QXmlStreamReader &xmlReader);
     void GhiFile(QList<person> list, QString);
+    QList<person> DocFile(QString);
+
+    ~DataServices();
 };
 
 #endif // DATASERVICES_H
