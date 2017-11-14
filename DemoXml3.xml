@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<People>
+    <Person ID="10000">
+        <Name>Nam</Name>
+    </Person>
+    <Person ID="10001">
+        <Name>Nam</Name>
+    </Person>
+    <Person ID="10003">
+        <Name>Nam</Name>
+    </Person>
+</People>
