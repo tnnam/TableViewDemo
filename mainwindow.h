@@ -3,12 +3,18 @@
 
 #include <QMainWindow>
 #include <QList>
+#include <QObject>
 #include <QString>
 #include <QtXml>
 #include <QFile>
+#include <QMessageBox>
 #include <QXmlStreamAttribute>
 #include <QXmlStreamWriter>
 #include <QXmlStreamReader>
+#include <QModelIndex>
+#include <QStandardItem>
+#include <QStandardItemModel>
+#include "person.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,17 +28,15 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void on_addButton_clicked();
+
 private:
-    struct person
-    {
-        int ID, age;
-        string name;
-    };
-    QList<person> listP;
-    QString xmlFileName = "C:/Users/hp/Desktop/DemoXml3.xml";
-    void DocFile(QList<person> list, QString);
-    void GhiFile(QList<person> list, QString);
     Ui::MainWindow *ui;
+    QStandardItemModel *model;
+    QList<person> listP;
+    QString xmlFileName = "/Users/nam/TableViewDemo/DemoXml3.xml";
+    void setModelForTableView();
 };
 
 #endif // MAINWINDOW_H

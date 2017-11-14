@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <People>
-    <Person ID="10000">
+    <Person ID="1000">
         <Name>Nam</Name>
+        <Age>19</Age>
     </Person>
-    <Person ID="10001">
+    <Person ID="1001">
         <Name>Nam</Name>
-    </Person>
-    <Person ID="10003">
-        <Name>Nam</Name>
+        <Age>19</Age>
     </Person>
 </People>

@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT       += xml
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = TableDemo
@@ -25,10 +25,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    dataservices.cpp \
+    datasource.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    dataservices.h \
+    person.h \
+    datasource.h
 
 FORMS += \
         mainwindow.ui
