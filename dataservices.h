@@ -17,8 +17,8 @@ class DataServices
 {
 public:
     DataServices();
-    QList<person> parsePerson(QXmlStreamReader &xmlReader);
     void GhiFile(QList<person> list, QString);
+    person parsePerson(QXmlStreamReader &xmlReader);
     QList<person> DocFile(QString);
 
     ~DataServices();

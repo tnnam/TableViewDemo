@@ -27,13 +27,24 @@ public:
 private slots:
     void on_addButton_clicked();
 
+    void on_repairButton_clicked();
+
+    void on_saveButton_clicked();
+
+    void on_deleteButton_clicked();
+
+    void on_sortButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QStandardItemModel *model;
     DataServices data;
     QList<person> listP;
     QString xmlFileName = "/Users/nam/TableViewDemo/DemoXml3.xml";
+    void setModel(int, person);
     void setModelForTableView();
+    bool sosanh(person, person);
+    void bubble_sort(QList<person>);
 };
 
 #endif // MAINWINDOW_H
