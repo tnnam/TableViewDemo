@@ -17,7 +17,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 void MainWindow::setModelForTableView(){
     model->setHorizontalHeaderItem(0, new QStandardItem("ID"));
     model->setHorizontalHeaderItem(1, new QStandardItem("Name"));

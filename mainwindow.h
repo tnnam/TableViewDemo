@@ -6,11 +6,6 @@
 #include <QObject>
 #include <QString>
 #include <QtXml>
-#include <QFile>
-#include <QMessageBox>
-#include <QXmlStreamAttribute>
-#include <QXmlStreamWriter>
-#include <QXmlStreamReader>
 #include <QModelIndex>
 #include <QStandardItem>
 #include <QStandardItemModel>
