@@ -2,13 +2,15 @@
 #define DATASOURCE_H
 
 #include <QAbstractItemModel>
+#include "person.h"
+#include <QList>
 
 class dataSource : public QAbstractItemModel
 {
     Q_OBJECT
 
 public:
-    explicit dataSource(QObject *parent = nullptr);
+    explicit dataSource(QList<person> list, QObject *parent = nullptr);
 
     // Header:
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
@@ -24,6 +26,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
 private:
+    QList<person> listP;
 };
 
 #endif // DATASOURCE_H
